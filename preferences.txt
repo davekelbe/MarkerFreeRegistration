@@ -1,0 +1,42 @@
+// Default preferences file
+
+// A string identifying the path to save output data into 
+path_up /Volumes/DJK/Asterix/Processed/
+// Intermediate data will be stored in this directory in appropriate subdirectories. 
+
+// A string identifying the source path where the lidar data lives 
+// Example paths for RIT: 
+// TEST2 	/Volumes/DJK/Asterix/Renamed/TEST2-lidar/
+// TEST 	/Volumes/DJK/Asterix/Renamed/TEST-lidar/
+// KIP3		/Volumes/DJK/Asterix/Renamed/BIRD/KIP3-lidar/
+// KIP6		/Volumes/DJK/Asterix/Renamed/BIRD/KIP6-lidar/
+// KIP9		/Volumes/DJK/Asterix/Renamed/BIRD/KIP9-lidar/
+// KIP13	/Volumes/DJK/Asterix/Renamed/BIRD/KIP13-lidar/
+// KIP18	/Volumes/DJK/Asterix/Renamed/BIRD/KIP18-lidar/
+// KIP30	/Volumes/DJK/Asterix/Renamed/BIRD/KIP30-lidar/
+// HAKT1	/Volumes/DJK/Asterix/Renamed/BIRD/HAKT1-lidar/
+// HAKT2	/Volumes/DJK/Asterix/Renamed/BIRD/HAKT1-lidar/
+// HAVO		/Volumes/DJK/Asterix/Renamed/HAVO-lidar/
+// MAT		/Volumes/DJK/Asterix/Renamed/MAT-lidar/
+// harvard 	D:\Users\djk2312\Documents\Harvard\2012-08-Harvard-Lidar\
+// soaproot	D:\Data\CaliforniaLidar\
+path_source /Volumes/DJK/Asterix/Renamed/TEST2-lidar/
+
+
+// A string identifying the experiment 
+// Used to identify path of raw CBL data and to organize output data 
+//Acceptable values include HAKT1, HAKT2, KIP3, KIP6, KIP9, KIP13, KIP18, KIP30, HAVO, MAT, harvard, michigan, soaproot, sanjoaquin
+info_experiment TEST2
+
+// A site to process. See README for acceptable sites for each experiment. 
+info_sites 31
+
+// An array of plots to process, e.g., 1:25; will process plots 1 through 25 in batch mode; while =8,13,14; will process only plots 8,13,14. See README for acceptable plots for each site/experiment. 
+info_plots 8,13,14
+
+// A string specifying the date (MONTH-DAY) so that you can re-process the data (for example, with code modifications without wiping out your previous results. In general, keep this constant for your full set of analyses. Example acceptable value: 12-03 
+info_suffix 05-21
+
+// Set to true to skip the computationally-intensive segment detection and solely digitize manually. Set to false to initialize candidate segments automatically and then refine using manual digitization
+options_skipseg true 
+
